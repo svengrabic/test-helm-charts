@@ -3,12 +3,12 @@ entries:
   my-first-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-06-25T16:43:38.639235242Z"
+    created: "2024-06-25T16:46:21.108091212Z"
     description: A Helm chart for Kubernetes
     digest: fe371985d4bde6962c5efaa762cd078670d34d08c6509c1f8dbaa75ef8b3e93e
     name: my-first-chart
     type: application
     urls:
-    - https://svengrabic.github.io/test-helm-chart/my-first-chart-0.1.0.tgz
+    - https://svengrabic.github.io/test-helm-charts/my-first-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-25T16:43:38.638207957Z"
+generated: "2024-06-25T16:46:21.106117694Z"
