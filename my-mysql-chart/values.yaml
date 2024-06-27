@@ -1,0 +1,5 @@
+# Default values for my-mysql-chart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+version: mysql:8.0
