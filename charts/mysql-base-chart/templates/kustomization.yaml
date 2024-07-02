@@ -1,0 +1,7 @@
+helmCharts:
+- name: {{ .Values.targetChartName }}
+  includeCRDs: false
+  version: {{ .Values.targetChartVersion }}
+  repo: https://svengrabic.github.io/test-helm-charts/
+    #additionalValuesFiles:
+    #- values_base.yaml
