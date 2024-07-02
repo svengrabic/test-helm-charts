@@ -22,4 +22,15 @@ entries:
     urls:
     - https://github.com/svengrabic/test-helm-charts/releases/download/my-mysql-chart-0.1.0/my-mysql-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-27T17:00:40.524379212Z"
+  mysql-base-chart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-07-02T11:04:04.083187329Z"
+    description: A Helm chart for Kubernetes
+    digest: 8c4363aebbf326f36c5c12604f8b07e31d99c8999cd79d638afbb1919ba26a4f
+    name: mysql-base-chart
+    type: application
+    urls:
+    - https://github.com/svengrabic/test-helm-charts/releases/download/mysql-base-chart-0.1.0/mysql-base-chart-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-07-02T11:04:04.08319333Z"
