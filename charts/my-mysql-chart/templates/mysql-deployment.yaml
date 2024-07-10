@@ -17,39 +17,6 @@ spec:
       containers:
       - image: {{ .Values.version }}
         name: mysql
-        env:
-        - name: MYSQL_ROOT_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: mysql-root
-              key: password
-        
-        # required for entrypoint when
-        # all the custom users are created
-        - name: MYSQL_RW_USER_NAME
-          valueFrom:
-            secretKeyRef:
-              name: mysql-rw
-              key: username
-
-        - name: MYSQL_RW_USER_PWD
-          valueFrom:
-            secretKeyRef:
-              name: mysql-rw
-              key: password
-        
-        - name: MYSQL_GRAFANA_RO_NAME
-          valueFrom:
-            secretKeyRef:
-              name: mysql-grafana-ro
-              key: username
-
-        - name: MYSQL_GRAFANA_RO_PWD
-          valueFrom:
-            secretKeyRef:
-              name: mysql-grafana-ro
-              key: password
-        
         ports:
         - containerPort: 3306
           name: mysql
@@ -59,8 +26,6 @@ spec:
         - name: mysql-config-volume
           mountPath: /etc/mysql/conf.d/default_auth.cnf
           subPath: default_auth
-        - name: mysql-init-volume
-          mountPath: /docker-entrypoint-initdb.d
       volumes:
       - name: mysql-persistent-storage
         persistentVolumeClaim:
@@ -69,7 +34,3 @@ spec:
       - name: mysql-config-volume
         configMap:
           name: mysql-config
-
-      - name: mysql-init-volume
-        configMap:
-          name: mysql-init
