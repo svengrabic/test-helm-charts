@@ -17,6 +17,9 @@ spec:
       containers:
       - image: {{ .Values.version }}
         name: mysql
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: admin
         ports:
         - containerPort: 3306
           name: mysql
